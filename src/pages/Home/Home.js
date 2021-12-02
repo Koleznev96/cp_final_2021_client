@@ -40,21 +40,24 @@ export const Home = () => {
             <div className={s.wrapper}>
                 <div
                     className={s.button + ((hintSystem.statusHint === 1) ? (' ' + s.hint_active) : '')}
-                    onClick={() => console.log('button click-1')}
+                    onClick={(e) => {if(e.currentTarget.name == 'button')console.log('button click-1')}}
+                    name='button'
                 >
                     Кнопка - 1
                     <HintPopup index={1} />
                 </div>
                 <div
                     className={s.button + ((hintSystem.statusHint === 2) ? (' ' + s.hint_active) : '')}
-                    onClick={() => console.log('button click-2')}
+                    onClick={(e) => {if(e.currentTarget.name == 'button')console.log('button click-2')}}
+                    name='button'
                 >
                     Кнопка - 2
                     <HintPopup index={2} />
                 </div>
                 <div
                     className={s.button + ((hintSystem.statusHint === 3) ? (' ' + s.hint_active) : '')}
-                    onClick={() => console.log('button click-3')}
+                    onClick={(e) => {if(e.currentTarget.name == 'button')console.log('button click-3')}}
+                    name='button'
                 >
                     Кнопка - 3
                     <HintPopup index={3} />
